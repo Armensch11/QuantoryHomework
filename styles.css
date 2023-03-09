@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/wood-pattern.jpg);
+  background-size: cover;
+  background-position: no-repeat;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  
+}
+.iphone-main{
+  width:18rem;
+  height:34rem;
+
+  border-radius: 1.8rem;
+  background: linear-gradient(#fff, #fff) padding-box,
+  linear-gradient(45deg, rgb(235, 215, 168), rgb(240, 207, 137)) border-box;
+  border: 4px solid transparent;
+  margin: 0 auto;
+ 
+}
+.iphone-screen {
+  box-sizing: inherit;
+  width:16rem;
+  height:26rem;
+  background-image: url(./images/screen-wallpaper.jpg);
+  background-size: cover;
+  background-position: no-repeat;
+  margin: 60px 12px ;
+}
+.home-button {
+  box-sizing: inherit;
+  width:3rem;
+  height:3rem;
+  background: linear-gradient(#fff, #fff) padding-box,
+             linear-gradient(90deg, rgb(100, 100, 102), rgb(239, 236, 236)) border-box;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  margin: -54px auto;
+}

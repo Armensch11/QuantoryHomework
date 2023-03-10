@@ -26,10 +26,9 @@ function startTime() {
   dateFull.style.color = "#fff";
   dateFull.style.fontSize = "12px";
   dateFull.style.fontWeight = 400;
-  // console.log(day + ", " + date + " " + month);
+
   dateFull.innerHTML = day + ", " + date + " " + month;
   clock.innerHTML = h + ":" + m;
-  // date.innerHTML = today;
 
   setTimeout(startTime, 1000);
 }

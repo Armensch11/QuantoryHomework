@@ -12,7 +12,7 @@
   <title>Iphone7</title>
 </head>
 
-<body onload="startTime()">
+<body onload="startTime()" onClick="animateCharge()">
 
   <div class="container">
 
@@ -37,12 +37,15 @@
             <span class="network-dots"></span>
             <span class="network-dots"></span>
             <span class="network-dots"></span>
-            <span class="network-name">Quantory</span>
+            <span class="network-name">Quantori</span>
             <span class="network-wifi"> <img src="./images/wifi-white.png" alt="wi-fi"></span>
 
           </div>
           <div class="top pointer"></div>
           <div class="battery">
+            <div id="battery-charge">
+
+            </div>
             <img src="./images/battery-white.png" class="battery-image" alt="battery">
           </div>
         </header>

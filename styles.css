@@ -179,6 +179,16 @@ align-items: center;
 
 .battery {
   height:18px;
+  position: relative;
+}
+#battery-charge{
+  position:absolute;
+  top:3px;
+  left:2px;
+  width:8px;
+  height:5.5px;
+  /* //background-color: #0dd81e; */
+ 
 }
 .battery img{ 
   /* object-fit: cover; */

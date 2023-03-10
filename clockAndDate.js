@@ -39,3 +39,33 @@ function checkTime(i) {
   } // add zero in front of numbers < 10
   return i;
 }
+function debounce(func, timeout = 300) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(func, timeout);
+  };
+}
+function animateCharge() {
+  const charge = document.getElementById("battery-charge");
+  charge.style.width = "0px";
+  for (let i = 1; i <= 12; i++) {
+    if (i > 2) {
+      (function (i) {
+        setTimeout(() => {
+          console.log(i);
+          charge.style.width = `${i}px`;
+          charge.style.backgroundColor = "#0dd81e";
+        }, 500 * i);
+      })(i);
+    } else {
+      (function (i) {
+        setTimeout(() => {
+          console.log(i);
+          charge.style.width = `${i}px`;
+          charge.style.backgroundColor = "#e83616";
+        }, 500 * i);
+      })(i);
+    }
+  }
+}

@@ -38,7 +38,7 @@
   box-sizing: inherit;
   width:16rem;
   height:26rem;
-  background-image: url(./images/screen-wallpaper.jpg);
+  background-image: url(./images/wallpaper2.jpg);
   background-size: cover;
   background-position: no-repeat;
   margin: 60px 12px ;
@@ -175,7 +175,7 @@ align-items: center;
   /* margin-top: 0.5rem; */
   background-color: grey;
   border-radius: 3px;
-  margin:2px 92px 0px 30px
+  margin:2px 88px 0px 34px
 }
 .bottom  {
   margin: auto auto;

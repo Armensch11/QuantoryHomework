@@ -8,6 +8,7 @@ function startTime() {
     "Friday",
     "Saturday",
   ];
+
   const today = new Date();
   let h = today.getHours();
   let m = today.getMinutes();
@@ -23,14 +24,15 @@ function startTime() {
   clock.style.color = "#fff";
   clock.style.fontSize = "55px";
   clock.style.fontWeight = 100;
+  // clock.style.display = "none";
   dateFull.style.color = "#fff";
   dateFull.style.fontSize = "12px";
   dateFull.style.fontWeight = 400;
 
   dateFull.innerHTML = day + ", " + date + " " + month;
   clock.innerHTML = h + ":" + m;
-
-  setTimeout(startTime, 1000);
+  randomWallpaper();
+  setTimeout(startTime, 20000);
 }
 
 function checkTime(i) {
@@ -68,4 +70,16 @@ function animateCharge() {
       })(i);
     }
   }
+}
+function randomWallpaper() {
+  const wallpapers = [
+    "wallpaper1.jpg",
+    "wallpaper2.jpg",
+    "wallpaper3.jpg",
+    "wallpaper4.jpg",
+    "wallpaper5.jpg",
+  ];
+  const screen = document.getElementsByClassName("iphone-screen")[0];
+  const index = Math.floor(Math.random() * 4);
+  screen.style.backgroundImage = `url(./images/${wallpapers[index]})`;
 }

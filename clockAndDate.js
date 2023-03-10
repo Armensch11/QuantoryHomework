@@ -80,6 +80,6 @@ function randomWallpaper() {
     "wallpaper5.jpg",
   ];
   const screen = document.getElementsByClassName("iphone-screen")[0];
-  const index = Math.floor(Math.random() * 4);
+  const index = Math.round(Math.random() * 3);
   screen.style.backgroundImage = `url(./images/${wallpapers[index]})`;
 }

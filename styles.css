@@ -210,3 +210,37 @@ align-items: center;
   margin-right: 4px;
 
 }
+.screen-main{
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.unlock-slide{
+  margin-top: 14rem;
+  color:rgb(166, 164, 164);
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+
+ 
+}
+.slide-title{
+  margin-bottom:2px ;
+  display: inline-block;
+}
+.unlock-icon{
+  height: inherit;
+}
+.unlock-icon img{
+  height:14px;
+  display: inline-block;
+
+}
+/* #clock{
+  color: #f5f5f5;
+  font-size: 50px;
+  font-weight: 10;
+} */

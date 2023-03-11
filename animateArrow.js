@@ -1,18 +1,14 @@
 function animateArrow() {
-  const arrow = document.getElementsByClassName("arrow");
-  for (let i = 0; i < arrow.length; i++) {
-    (function () {
-      setTimeout(() => {
-        arrow[i].style.display = "none";
-      }, i * 300);
-    })();
+  // e.stopPropagation();
+  const arrow = document.getElementById("arrow");
+  let posX = 0;
+  let id = setInterval(move, 130);
+  function move() {
+    if (posX < 26) {
+      arrow.style.left = posX + "px";
+      posX += 5;
+    } else {
+      posX = 0;
+    }
   }
-  for (let i = 0; i < arrow.length; i++) {
-    (function () {
-      setTimeout(() => {
-        arrow[i].style.display = "";
-      }, i * 400 + 900);
-    })();
-  }
-  setTimeout(animateArrow, 3000);
 }

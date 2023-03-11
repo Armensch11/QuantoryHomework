@@ -52,7 +52,13 @@
         <section class="screen-main">
           <div id="clock"></div>
           <div id="date"></div>
-          <div class="unlock-slide"> <span class="unlock-icon"><img src="./images/unlock.png" alt="forward"></span>
+          <div class="unlock-slide">
+            <div class="arrow-block" onclick="animateArrow()">
+              <span id="arrow"><img id="arrow-image" src=" ./images/unlock.png" alt="forward"></span>
+              <!-- <span class="unlock-icon arrow"><img src="./images/unlock.png" alt="forward"></span>
+              <span class="unlock-icon arrow"><img src="./images/unlock.png" alt="forward"></span> -->
+            </div>
+
             <span class="slide-title">slide to unlock</span>
           </div>
         </section>
@@ -68,6 +74,7 @@
     </div>
   </div>
   <script src="./clockAndDate.js" defer></script>
+  <script src="./animateArrow.js" defer></script>
 </body>
 
 </html>

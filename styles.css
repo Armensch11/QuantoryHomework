@@ -230,6 +230,18 @@ align-items: center;
   flex-direction: column;
   align-items: center;
 }
+.arrow-block{
+ 
+  width:36px;
+  height:10px;
+  position:relative;
+  background-color:"white"
+}
+#arrow{
+  position:absolute;
+  height: 10px;
+  left:0px;
+  top:-5px}
 .unlock-slide{
   margin-top: 14rem;
   color:rgb(166, 164, 164);
@@ -241,15 +253,20 @@ align-items: center;
 
  
 }
+
 .slide-title{
   margin-bottom:2px ;
   display: inline-block;
 }
-.unlock-icon{
+/* .unlock-icon{
   height: inherit;
-}
-.unlock-icon img{
-  height:14px;
-  display: inline-block;
+  
+} */
+#arrow-image{
+  position:absolute;
+ 
+  width:10px;
+  height:16px;
+
 
 }

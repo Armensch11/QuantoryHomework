@@ -43,13 +43,14 @@ function checkTime(i) {
   } // add zero in front of numbers < 10
   return i;
 }
-function debounce(func, timeout = 300) {
+function debounce(func, timeout = 6000) {
   let timer;
   return (...args) => {
     clearTimeout(timer);
     timer = setTimeout(func, timeout);
   };
 }
+
 function animateCharge() {
   const charge = document.getElementById("battery-charge");
   charge.style.width = "0px";
@@ -73,6 +74,12 @@ function animateCharge() {
     }
   }
 }
+const iphoneBody = document.getElementsByClassName("iphone-main")[0];
+iphoneBody.addEventListener(
+  "click",
+  debounce(() => animateCharge(), 6000)
+);
+
 function randomWallpaper() {
   const wallpapers = [
     "wallpaper1.jpg",

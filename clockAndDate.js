@@ -1,3 +1,4 @@
+//import animateArrow from "./animateArrow.js";
 function startTime() {
   const weekDays = [
     "Sunday",
@@ -32,6 +33,7 @@ function startTime() {
   dateFull.innerHTML = day + ", " + date + " " + month;
   clock.innerHTML = h + ":" + m;
   randomWallpaper();
+
   setTimeout(startTime, 20000);
 }
 

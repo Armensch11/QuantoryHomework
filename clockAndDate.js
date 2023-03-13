@@ -11,13 +11,13 @@ function startTime() {
   ];
 
   const today = new Date();
-  let h = today.getHours();
-  let m = today.getMinutes();
+  let hours = today.getHours();
+  let minutes = today.getMinutes();
   const month = today.toLocaleString("default", { month: "long" });
   const dayIndex = today.getDay();
   const day = weekDays[dayIndex];
   const date = today.getDate();
-  m = checkTime(m);
+  const minutesFormatted = formatTime(minutes);
 
   const clock = document.getElementById("clock");
   const dateFull = document.getElementById("date");
@@ -31,13 +31,13 @@ function startTime() {
   dateFull.style.fontWeight = 400;
 
   dateFull.innerHTML = day + ", " + date + " " + month;
-  clock.innerHTML = h + ":" + m;
-  randomWallpaper();
+  clock.innerHTML = hours + ":" + minutesFormatted;
+  addRandomWallpaper();
 
   setTimeout(startTime, 20000);
 }
 
-function checkTime(i) {
+function formatTime(i) {
   if (i < 10) {
     i = "0" + i;
   } // add zero in front of numbers < 10
@@ -50,28 +50,18 @@ function debounce(func, timeout = 6000) {
     timer = setTimeout(func, timeout);
   };
 }
-
+function setBatteryCharge(charge, size, color) {
+  setTimeout(() => {
+    charge.style.width = `${size}px`;
+    charge.style.backgroundColor = color;
+  }, 500 * size);
+}
 function animateCharge() {
   const charge = document.getElementById("battery-charge");
-  charge.style.width = "0px";
+  // charge.style.width = "0px";
   for (let i = 1; i <= 12; i++) {
-    if (i > 2) {
-      (function (i) {
-        setTimeout(() => {
-          console.log(i);
-          charge.style.width = `${i}px`;
-          charge.style.backgroundColor = "#0dd81e";
-        }, 500 * i);
-      })(i);
-    } else {
-      (function (i) {
-        setTimeout(() => {
-          console.log(i);
-          charge.style.width = `${i}px`;
-          charge.style.backgroundColor = "#e83616";
-        }, 500 * i);
-      })(i);
-    }
+    const color = i > 2 ? "#0dd81e" : "#e83616";
+    setBatteryCharge(charge, i, color);
   }
 }
 const iphoneBody = document.getElementsByClassName("iphone-main")[0];
@@ -80,7 +70,7 @@ iphoneBody.addEventListener(
   debounce(() => animateCharge(), 6000)
 );
 
-function randomWallpaper() {
+function addRandomWallpaper() {
   const wallpapers = [
     "wallpaper1.jpg",
     "wallpaper2.jpg",
